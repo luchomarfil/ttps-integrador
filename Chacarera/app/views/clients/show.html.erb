@@ -1,4 +1,49 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <strong>Cuil cuit:</strong>
+  <%= @client.cuil_cuit %>
+</p>
+
+<p>
+  <strong>Dni:</strong>
+  <%= @client.dni %>
+</p>
+
+<p>
+  <strong>Genero:</strong>
+  <%= @client.genero %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @client.nombre %>
+</p>
+
+<p>
+  <strong>Apellido:</strong>
+  <%= @client.apellido %>
+</p>
+
+<p>
+  <strong>Fecha nacimiento:</strong>
+  <%= @client.fecha_nacimiento %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @client.telefono %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @client.email %>
+</p>
+
+<p>
+  <strong>Skype:</strong>
+  <%= @client.skype %>
+</p>
+
 <%= link_to 'Edit', edit_client_path(@client) %> |
 <%= link_to 'Back', clients_path %>

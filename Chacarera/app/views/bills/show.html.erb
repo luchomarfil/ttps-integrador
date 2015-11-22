@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Concepto:</strong>
+  <%= @bill.concepto %>
+</p>
+
+<p>
+  <strong>Monto:</strong>
+  <%= @bill.monto %>
+</p>
+
+<p>
+  <strong>Fecha emision:</strong>
+  <%= @bill.fecha_emision %>
+</p>
+
+<p>
+  <strong>Person:</strong>
+  <%= @bill.person %>
+</p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @bill.client %>
+</p>
+
+<%= link_to 'Edit', edit_bill_path(@bill) %> |
+<%= link_to 'Back', bills_path %>
