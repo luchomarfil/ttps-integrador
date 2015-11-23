@@ -1,9 +1,9 @@
 class CreateClients < ActiveRecord::Migration
   def change
     create_table :clients do |t|
+      t.belongs_to :genero, index: true
       t.string :cuil_cuit, null: false
       t.integer :dni,      null: false
-      t.string :genero
       t.string :nombre,    null: false
       t.string :apellido,  null: false
       t.datetime :fecha_nacimiento

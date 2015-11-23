@@ -21,7 +21,9 @@
   </div>
   <div class="field">
     <%= f.label :genero %><br>
-    <%= f.text_field :genero %>
+    <!-- <%= select_tag(:genero, options_for_select([['Seleccionar',0],['Masculino', 1], ['Femenino', 2],['Indeterminado',3]])) %><br> -->
+    <!-- <%= select_tag(:genero, options_for_select([ "Masculino", "Femenino" ], "Seleccione")) %> -->
+    <%=select("client", "genero_id", Genero.all.collect {|p| [ p.nombre, p.id ] }, {prompt: 'Seleccionar Genero'}) %>
   </div>
   <div class="field">
     <%= f.label :nombre %><br>
