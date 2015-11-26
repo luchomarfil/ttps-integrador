@@ -5,9 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Genero.create!(nombre:'Masculino')
-Genero.create!(nombre:'Femenino')
-Genero.create!(nombre:'Indeterminado')
+Gender.create!(nombre:'Masculino')
+Gender.create!(nombre:'Femenino')
+Gender.create!(nombre:'Indeterminado')
+
+Client.create!(cuil_cuit:"20305759482",dni:30575948,nombre:"Luciano",apellido:"Marfil",telefono:"4214554",email:"luchomarfil@gmail.com",gender_id:1)
+Client.create!(cuil_cuit:"20307812542",dni:30781254,nombre:"Carlos",apellido:"Sánchez",telefono:"4585654",email:"r.sanchez@gmail.com",gender_id:1)
+Client.create!(cuil_cuit:"20182321542",dni:18232154,nombre:"Edmon",apellido:"Sabiondo",telefono:"4214554",email:"e.sabiondo@gmail.com",gender_id:1)
+Client.create!(cuil_cuit:"20256589542",dni:25658954,nombre:"Peppa",apellido:"Pig",     telefono:"4588565",email:"peppa.pig@gmail.uk",gender_id:3)
 
 Person.create!(juridica: false, nombre: 'Roberto Sanchez', cuil_cuit: '20305759482')
 Person.create!(juridica: false, nombre: 'Julio Cordoba', cuil_cuit: '20305759423')

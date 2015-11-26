@@ -7,7 +7,7 @@
     <tr>
       <th>Cuil cuit</th>
       <th>Dni</th>
-      <th>Genero</th>
+      <th>Gender</th>
       <th>Nombre</th>
       <th>Apellido</th>
       <th>Fecha nacimiento</th>
@@ -23,13 +23,14 @@
       <tr>
         <td><%= client.cuil_cuit %></td>
         <td><%= client.dni %></td>
-        <td><%= client.genero %></td>
+        <td><%= client.gender%></td>
         <td><%= client.nombre %></td>
         <td><%= client.apellido %></td>
         <td><%= client.fecha_nacimiento %></td>
         <td><%= client.telefono %></td>
         <td><%= client.email %></td>
         <td><%= client.skype %></td>
+        <td><%= link_to 'New Bill', new_bill_path(client) %></td>
         <td><%= link_to 'Show', client %></td>
         <td><%= link_to 'Edit', edit_client_path(client) %></td>
         <td><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>

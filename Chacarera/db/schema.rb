@@ -14,8 +14,8 @@
 ActiveRecord::Schema.define(version: 20151123000100) do
 
   create_table "bills", force: :cascade do |t|
-    t.integer  "client_id",     null: false
-    t.integer  "person_id",     null: false
+    t.integer  "client_id"
+    t.integer  "person_id"
     t.string   "concepto"
     t.float    "monto"
     t.datetime "fecha_emision"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20151123000100) do
   add_index "bills", ["person_id"], name: "index_bills_on_person_id"
 
   create_table "clients", force: :cascade do |t|
-    t.integer  "genero_id"
+    t.integer  "gender_id"
     t.string   "cuil_cuit",        null: false
     t.integer  "dni",              null: false
     t.string   "nombre",           null: false
@@ -40,15 +40,15 @@ ActiveRecord::Schema.define(version: 20151123000100) do
     t.datetime "updated_at",       null: false
   end
 
-  add_index "clients", ["genero_id"], name: "index_clients_on_genero_id"
+  add_index "clients", ["gender_id"], name: "index_clients_on_gender_id"
 
-  create_table "generos", force: :cascade do |t|
+  create_table "genders", force: :cascade do |t|
     t.string   "nombre"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "generos", ["nombre"], name: "index_generos_on_nombre"
+  add_index "genders", ["nombre"], name: "index_genders_on_nombre"
 
   create_table "people", force: :cascade do |t|
     t.boolean  "juridica"

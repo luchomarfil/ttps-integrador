@@ -14,7 +14,9 @@ class BillsController < ApplicationController
 
   # GET /bills/new
   def new
+    adfad
     @bill = Bill.new
+    @client = params[:client_id]
   end
 
   # GET /bills/1/edit

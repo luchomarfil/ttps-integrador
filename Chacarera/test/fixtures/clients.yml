@@ -3,7 +3,7 @@
 one:
   cuil_cuit: MyString
   dni: 1
-  genero: MyString
+  gender: MyString
   nombre: MyString
   apellido: MyString
   fecha_nacimiento: 2015-11-22 17:53:04
@@ -14,7 +14,7 @@ one:
 two:
   cuil_cuit: MyString
   dni: 1
-  genero: MyString
+  gender: MyString
   nombre: MyString
   apellido: MyString
   fecha_nacimiento: 2015-11-22 17:53:04
