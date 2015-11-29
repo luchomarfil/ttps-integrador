@@ -1,9 +1,9 @@
-class CreateGenres < ActiveRecord::Migration
+class CreateGenders < ActiveRecord::Migration
   def change
     create_table :genders do |t|
-      t.string :nombre
+      t.string :name
       t.timestamps null: false
     end
-    add_index :genders, :nombre
+    add_index :genders, :name
   end
 end

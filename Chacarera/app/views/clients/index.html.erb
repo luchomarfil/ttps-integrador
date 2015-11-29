@@ -8,10 +8,10 @@
       <th>Cuil cuit</th>
       <th>Dni</th>
       <th>Gender</th>
-      <th>Nombre</th>
-      <th>Apellido</th>
-      <th>Fecha nacimiento</th>
-      <th>Telefono</th>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>Birth date</th>
+      <th>Telephone</th>
       <th>Email</th>
       <th>Skype</th>
       <th colspan="3"></th>
@@ -24,13 +24,13 @@
         <td><%= client.cuil_cuit %></td>
         <td><%= client.dni %></td>
         <td><%= client.gender%></td>
-        <td><%= client.nombre %></td>
-        <td><%= client.apellido %></td>
-        <td><%= client.fecha_nacimiento %></td>
-        <td><%= client.telefono %></td>
+        <td><%= client.name %></td>
+        <td><%= client.surname %></td>
+        <td><%= client.birth_date %></td>
+        <td><%= client.telephone %></td>
         <td><%= client.email %></td>
         <td><%= client.skype %></td>
-        <td><%= link_to 'New Bill', new_bill_path(client) %></td>
+        <td><%= link_to 'New Bill', new_bill_for_client_path(client) %></td>
         <td><%= link_to 'Show', client %></td>
         <td><%= link_to 'Edit', edit_client_path(client) %></td>
         <td><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -43,4 +43,3 @@
 
 <%= link_to 'New Client', new_client_path %>
 <%= link_to 'Inicio', controller: "welcome" %>
-<!--link_to "Profile", controller: "profiles", action: "show", id: @profile-->

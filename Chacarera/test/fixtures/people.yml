@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  juridica: false
-  nombre: MyString
-  cuil_cuit: MyString
+  legal: false
+  name: Ricardo Lopez
+  cuil_cuit: 2065523568
 
 two:
-  juridica: false
-  nombre: MyString
-  cuil_cuit: MyString
+  legal: true
+  name: Fantasia SA
+  cuil_cuit: 30575595251

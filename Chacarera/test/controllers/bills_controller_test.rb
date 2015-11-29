@@ -12,13 +12,13 @@ class BillsControllerTest < ActionController::TestCase
   end
 
   test "should get new" do
-    get :new
+    get :new, client_id: clients(:one)
     assert_response :success
   end
 
   test "should create bill" do
     assert_difference('Bill.count') do
-      post :create, bill: { client_id: @bill.client_id, concepto: @bill.concepto, fecha_emision: @bill.fecha_emision, monto: @bill.monto, person_id: @bill.person_id }
+      post :create, client_id:@bill.client_id, bill: { client_id: @bill.client_id, concept: @bill.concept, invoice_date: @bill.invoice_date, amount: @bill.amount, person_id: @bill.person_id }
     end
 
     assert_redirected_to bill_path(assigns(:bill))
@@ -35,7 +35,7 @@ class BillsControllerTest < ActionController::TestCase
   end
 
   test "should update bill" do
-    patch :update, id: @bill, bill: { client_id: @bill.client_id, concepto: @bill.concepto, fecha_emision: @bill.fecha_emision, monto: @bill.monto, person_id: @bill.person_id }
+    patch :update, id: @bill, bill: { client_id: @bill.client_id, concept: @bill.concept, invoice_date: @bill.invoice_date, amount: @bill.amount, person_id: @bill.person_id }
     assert_redirected_to bill_path(assigns(:bill))
   end
 

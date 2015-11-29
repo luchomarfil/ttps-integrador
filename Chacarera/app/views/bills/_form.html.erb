@@ -10,26 +10,27 @@
       </ul>
     </div>
   <% end %>
+  <div class="field">
+    <%= f.label :client %><br>
+    <%= f.hidden_field :client_id, :value => "#{@bill.client.id}" %>
+    <%= @bill.client %>
+  </div>
 
   <div class="field">
-    <%= f.label :concepto %><br>
-    <%= f.text_field :concepto %>
+    <%= f.label :concept %><br>
+    <%= f.text_field :concept %>
   </div>
   <div class="field">
-    <%= f.label :monto %><br>
-    <%= f.text_field :monto %>
+    <%= f.label :amount %><br>
+    <%= f.text_field :amount %>
   </div>
   <div class="field">
-    <%= f.label :fecha_emision %><br>
-    <%= f.datetime_select :fecha_emision %>
+    <%= f.label :invoice_date %><br>
+    <%= f.date_select(:invoice_date,  start_year: 1990, end_year: Date.today.year, order: [:day, :month, :year]) %>
   </div>
   <div class="field">
     <%= f.label :person_id %><br>
-    <%= f.text_field :person_id %>
-  </div>
-  <div class="field">
-    <%= f.label :client_id %><br>
-    <%= f.text_field :client_id %>
+    <%= f.select(:person_id, Person.all.collect {|x| [ x.name, x.id ] }, {prompt: 'Select Person'}) %>
   </div>
   <div class="actions">
     <%= f.submit %>

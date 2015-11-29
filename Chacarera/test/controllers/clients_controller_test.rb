@@ -3,6 +3,8 @@ require 'test_helper'
 class ClientsControllerTest < ActionController::TestCase
   setup do
     @client = clients(:one)
+    @masculino = genders(:masculino)
+    @client.gender = @masculino
   end
 
   test "should get index" do
@@ -18,7 +20,7 @@ class ClientsControllerTest < ActionController::TestCase
 
   test "should create client" do
     assert_difference('Client.count') do
-      post :create, client: { apellido: @client.apellido, cuil_cuit: @client.cuil_cuit, dni: @client.dni, email: @client.email, fecha_nacimiento: @client.fecha_nacimiento, gender: @client.gender, nombre: @client.nombre, skype: @client.skype, telefono: @client.telefono }
+      post :create, client: { surname: @client.surname, cuil_cuit: @client.cuil_cuit, dni: @client.dni, email: @client.email, birth_date: @client.birth_date, gender_id: @masculino.id, name: @client.name, skype: @client.skype, telephone: @client.telephone }
     end
 
     assert_redirected_to client_path(assigns(:client))
@@ -35,7 +37,7 @@ class ClientsControllerTest < ActionController::TestCase
   end
 
   test "should update client" do
-    patch :update, id: @client, client: { apellido: @client.apellido, cuil_cuit: @client.cuil_cuit, dni: @client.dni, email: @client.email, fecha_nacimiento: @client.fecha_nacimiento, gender: @client.gender, nombre: @client.nombre, skype: @client.skype, telefono: @client.telefono }
+    patch :update, id: @client, client: { surname: @client.surname, cuil_cuit: @client.cuil_cuit, dni: @client.dni, email: @client.email, birth_date: @client.birth_date, gender_id: @client.gender_id, name: @client.name, skype: @client.skype, telephone: @client.telephone }
     assert_redirected_to client_path(assigns(:client))
   end
 

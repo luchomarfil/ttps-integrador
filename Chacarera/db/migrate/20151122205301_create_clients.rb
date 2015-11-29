@@ -4,10 +4,10 @@ class CreateClients < ActiveRecord::Migration
       t.belongs_to :gender, index: true
       t.string :cuil_cuit, null: false
       t.integer :dni,      null: false
-      t.string :nombre,    null: false
-      t.string :apellido,  null: false
-      t.datetime :fecha_nacimiento
-      t.string :telefono,  null: false
+      t.string :name,    null: false
+      t.string :surname,  null: false
+      t.datetime :birth_date
+      t.string :telephone,  null: false
       t.string :email,     null: false
       t.string :skype
       t.timestamps null: false

@@ -1,1 +1,1 @@
-json.extract! @client, :id, :cuil_cuit, :dni, :gender, :nombre, :apellido, :fecha_nacimiento, :telefono, :email, :skype, :created_at, :updated_at
+json.extract! @client, :id, :cuil_cuit, :dni, :gender, :name, :surname, :birth_date, :telephone, :email, :skype, :created_at, :updated_at

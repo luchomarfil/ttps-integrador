@@ -16,11 +16,11 @@ ActiveRecord::Schema.define(version: 20151123000100) do
   create_table "bills", force: :cascade do |t|
     t.integer  "client_id"
     t.integer  "person_id"
-    t.string   "concepto"
-    t.float    "monto"
-    t.datetime "fecha_emision"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.string   "concept",      null: false
+    t.float    "amount",       null: false
+    t.datetime "invoice_date", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   add_index "bills", ["client_id"], name: "index_bills_on_client_id"
@@ -28,31 +28,31 @@ ActiveRecord::Schema.define(version: 20151123000100) do
 
   create_table "clients", force: :cascade do |t|
     t.integer  "gender_id"
-    t.string   "cuil_cuit",        null: false
-    t.integer  "dni",              null: false
-    t.string   "nombre",           null: false
-    t.string   "apellido",         null: false
-    t.datetime "fecha_nacimiento"
-    t.string   "telefono",         null: false
-    t.string   "email",            null: false
+    t.string   "cuil_cuit",  null: false
+    t.integer  "dni",        null: false
+    t.string   "name",       null: false
+    t.string   "surname",    null: false
+    t.datetime "birth_date"
+    t.string   "telephone",  null: false
+    t.string   "email",      null: false
     t.string   "skype"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_index "clients", ["gender_id"], name: "index_clients_on_gender_id"
 
   create_table "genders", force: :cascade do |t|
-    t.string   "nombre"
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "genders", ["nombre"], name: "index_genders_on_nombre"
+  add_index "genders", ["name"], name: "index_genders_on_name"
 
   create_table "people", force: :cascade do |t|
-    t.boolean  "juridica"
-    t.string   "nombre",     null: false
+    t.boolean  "legal"
+    t.string   "name",       null: false
     t.string   "cuil_cuit",  null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

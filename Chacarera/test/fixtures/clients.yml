@@ -1,23 +1,23 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  cuil_cuit: MyString
-  dni: 1
-  gender: MyString
-  nombre: MyString
-  apellido: MyString
-  fecha_nacimiento: 2015-11-22 17:53:04
-  telefono: MyString
-  email: MyString
-  skype: MyString
+  cuil_cuit: 20305759482
+  dni: 30575948
+  gender_id: masculino.id
+  name: Luciano
+  surname: Marfil
+  birth_date: 2015-11-22 17:53:04
+  telephone: 4215445
+  email: luchomarfil@gmail.com
+  skype: lucho.marfil@hotmail.com
 
 two:
   cuil_cuit: MyString
   dni: 1
-  gender: MyString
-  nombre: MyString
-  apellido: MyString
-  fecha_nacimiento: 2015-11-22 17:53:04
-  telefono: MyString
+  gender_id: femenino.id
+  name: MyString
+  surname: MyString
+  birth_date: 2015-11-22 17:53:04
+  telephone: MyString
   email: MyString
   skype: MyString

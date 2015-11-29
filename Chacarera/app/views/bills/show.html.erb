@@ -2,17 +2,17 @@
 
 <p>
   <strong>Concepto:</strong>
-  <%= @bill.concepto %>
+  <%= @bill.concept %>
 </p>
 
 <p>
   <strong>Monto:</strong>
-  <%= @bill.monto %>
+  <%= @bill.amount %>
 </p>
 
 <p>
   <strong>Fecha emision:</strong>
-  <%= @bill.fecha_emision %>
+  <%= @bill.invoice_date %>
 </p>
 
 <p>
@@ -25,5 +25,7 @@
   <%= @bill.client %>
 </p>
 
+
 <%= link_to 'Edit', edit_bill_path(@bill) %> |
-<%= link_to 'Back', bills_path %>
+<%= link_to 'Back', bills_path unless @from_client %>
+<%= link_to 'Back', clients_path if @from_client %>

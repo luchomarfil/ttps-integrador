@@ -10,13 +10,18 @@ class BillsController < ApplicationController
   # GET /bills/1
   # GET /bills/1.json
   def show
+    @from_client = flash[:from_client]
   end
 
   # GET /bills/new
   def new
-    adfad
     @bill = Bill.new
-    @client = params[:client_id]
+    #duda como se pueden manejar asociaciones, es decir, creo una factura
+    #en base a un id cliente pasada en el request sobre bills/new/client_id
+    #Se asocia a bill el cliente? Por mas que en el create eso se va a hacer
+    #a partir de parametros? o se usa en el form una @client separada de @bill?
+    @client = Client.find(params[:client_id])
+    @bill.client = @client
   end
 
   # GET /bills/1/edit
@@ -27,10 +32,9 @@ class BillsController < ApplicationController
   # POST /bills.json
   def create
     @bill = Bill.new(bill_params)
-
     respond_to do |format|
       if @bill.save
-        format.html { redirect_to @bill, notice: 'Bill was successfully created.' }
+        format.html { redirect_to @bill, notice: 'Bill was successfully created.', flash: {from_client: true}}
         format.json { render :show, status: :created, location: @bill }
       else
         format.html { render :new }
@@ -71,6 +75,6 @@ class BillsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def bill_params
-      params.require(:bill).permit(:concepto, :monto, :fecha_emision, :person_id, :client_id)
+      params.require(:bill).permit(:concept, :amount, :invoice_date, :person_id, :client_id)
     end
 end

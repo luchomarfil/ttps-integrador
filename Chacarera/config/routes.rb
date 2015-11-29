@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'welcome#index'
+  get '/bills/new/:client_id', to: 'bills#new', as: 'new_bill_for_client'
   resources :bills
   resources :people
   resources :clients
