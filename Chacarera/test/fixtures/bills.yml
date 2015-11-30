@@ -13,3 +13,24 @@ two:
   invoice_date: 2015-11-22 18:16:39
   person: two
   client: two
+
+factura_uno:
+    concept: "Venta de lavarropa"
+    amount: 150
+    invoice_date: 2015-11-22 18:16:39
+    person: one
+    client: cliente_con_facturas
+
+factura_dos:
+    concept: "Venta de armario"
+    amount: 120
+    invoice_date: 2015-11-22 18:16:39
+    person: one
+    client: cliente_con_facturas
+
+factura_tres:
+    concept: "Venta de mesa y sillas"
+    amount: 1200
+    invoice_date: 2015-11-22 18:16:39
+    person: one
+    client: cliente_con_facturas

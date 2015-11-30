@@ -33,7 +33,7 @@ class Client < ActiveRecord::Base
   end
 
   def top_five_person
-    top = bills.select(:person_id).group(:person_id).order("SUM(:amount)").limit(5)
+    top = bills.select(:person_id).group(:person_id).order("SUM(amount) desc").limit(5)
     top.map {|b| b.person}
   end
 

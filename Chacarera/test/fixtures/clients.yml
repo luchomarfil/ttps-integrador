@@ -21,3 +21,36 @@ two:
   telephone: MyString
   email: MyString
   skype: MyString
+
+roberto:
+  cuil_cuit: 20312323182
+  dni: 30154452
+  gender_id: masculino.id
+  name: Roberto
+  surname: Castro
+  birth_date: 2015-11-22 17:53:04
+  telephone: 4708855
+  email: roberto.castro@gmail.com
+  skype: rcastro@hotmail.com
+
+cliente_sin_facturas:
+  cuil_cuit: 20777215462
+  dni: 50442252
+  gender_id: femenino.id
+  name: Laura
+  surname: Bernardi
+  birth_date: 2015-11-22 17:53:04
+  telephone: 4212255
+  email: lbb@gmail.com
+  skype: lbb@hotmail.com
+
+cliente_con_facturas:
+  cuil_cuit: 2012345652
+  dni: 123456785
+  gender_id: masculino.id
+  name: Luis
+  surname: Miguel
+  birth_date: 2015-11-22 17:53:04
+  telephone: 41222154
+  email: suave@gmail.com
+  skype: playa@hotmail.com

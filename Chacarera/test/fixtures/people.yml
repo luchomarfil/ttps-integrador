@@ -9,3 +9,8 @@ two:
   legal: true
   name: Fantasia SA
   cuil_cuit: 30575595251
+
+persona_cliente_roberto:
+  legal: true
+  name: Albahacas SA
+  cuil_cuit: 30336655489
