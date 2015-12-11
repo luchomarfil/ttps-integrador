@@ -18,9 +18,9 @@
         <td><%= person.legal %></td>
         <td><%= person.name %></td>
         <td><%= person.cuil_cuit %></td>
-        <td><%= link_to 'Show', person %></td>
-        <td><%= link_to 'Edit', edit_person_path(person) %></td>
-        <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t(:show), person %></td>
+        <td><%= link_to t(:edit), edit_person_path(person) %></td>
+        <td><%= link_to t(:destroy), person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

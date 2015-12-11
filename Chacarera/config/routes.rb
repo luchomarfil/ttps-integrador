@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
   root 'welcome#index'
-  get '/bills/new/:client_id', to: 'bills#new', as: 'new_bill_for_client'
+  #get '/bills/new/:client_id', to: 'bills#new', as: 'new_bill_for_client'
   resources :bills
   resources :people
-  resources :clients
+  #resources :clients
+
+  resources :clients do
+     resources :bills
+
+  end
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

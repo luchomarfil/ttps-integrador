@@ -1,5 +1,6 @@
 class Person < ActiveRecord::Base
   has_many :bills, dependent: :destroy
+
   # t.boolean :legal
   # t.string :name ,null:false
   # t.string :cuil_cuit, null:false

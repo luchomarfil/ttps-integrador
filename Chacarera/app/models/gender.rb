@@ -1,5 +1,5 @@
 class Gender < ActiveRecord::Base
-  has_many :people
+  has_many :clients
 
   def to_s
      name

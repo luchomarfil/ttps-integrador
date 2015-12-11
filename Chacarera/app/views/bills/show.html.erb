@@ -26,6 +26,6 @@
 </p>
 
 
-<%= link_to 'Edit', edit_bill_path(@bill) %> |
+<%= link_to t(:edit), edit_client_bill_path(@bill.client, @bill) %></td>
 <%= link_to 'Back', bills_path unless @from_client %>
 <%= link_to 'Back', clients_path if @from_client %>

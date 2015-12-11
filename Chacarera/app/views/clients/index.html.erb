@@ -5,16 +5,16 @@
 <table class="table">
   <thead>
     <tr>
-      <th>Cuil cuit</th>
-      <th>Dni</th>
-      <th>Gender</th>
-      <th>Name</th>
-      <th>Surname</th>
-      <th>Birth date</th>
-      <th>Telephone</th>
-      <th>Email</th>
+      <th><%= t :cuil_cuit %></th>
+      <th><%= t :dni %></th>
+      <th><%= t :gender%></th>
+      <th><%= t :name %></th>
+      <th><%= t :surname%></th>
+      <th><%= t :birth_date%></th>
+      <th><%= t :telephone%></th>
+      <th><%= t :email%></th>
       <th>Skype</th>
-      <th colspan="3"></th>
+      <th colspan="3"><%= t :actions %></th>
     </tr>
   </thead>
 
@@ -30,16 +30,16 @@
         <td><%= client.telephone %></td>
         <td><%= client.email %></td>
         <td><%= client.skype %></td>
-        <td><%= link_to 'New Bill', new_bill_for_client_path(client) %></td>
-        <td><%= link_to 'Show', client %></td>
-        <td><%= link_to 'Edit', edit_client_path(client) %></td>
-        <td><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'New Bill', new_client_bill_path(client) %></td>
+        <td><%= link_to t(:show), client %></td>
+        <td><%= link_to t(:edit), edit_client_path(client) %></td>
+        <td><%= link_to t(:destroy), client, method: :delete, data: { confirm: (t :delete_confirm) } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
+<%= t :hola %>
 <%= link_to 'New Client', new_client_path %>
 <%= link_to 'Inicio', controller: "welcome" %>

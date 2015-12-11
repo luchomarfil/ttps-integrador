@@ -16,10 +16,6 @@ class BillsController < ApplicationController
   # GET /bills/new
   def new
     @bill = Bill.new
-    #duda como se pueden manejar asociaciones, es decir, creo una factura
-    #en base a un id cliente pasada en el request sobre bills/new/client_id
-    #Se asocia a bill el cliente? Por mas que en el create eso se va a hacer
-    #a partir de parametros? o se usa en el form una @client separada de @bill?
     @client = Client.find(params[:client_id])
     @bill.client = @client
   end
