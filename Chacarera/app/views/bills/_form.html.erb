@@ -1,8 +1,7 @@
 <%= form_for(@bill) do |f| %>
   <% if @bill.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@bill.errors.count, "error") %> prohibited this bill from being saved:</h2>
-
+      <h2> <%= t(:error_msg, count: @bill.errors.count, locale: I18n.locale) << " " << (t :prohibited_save_error, model:  (t :bill)) %>:</h2>
       <ul>
       <% @bill.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -11,26 +10,26 @@
     </div>
   <% end %>
   <div class="field">
-    <%= f.label :client %><br>
+    <%= f.label t :client %><br>
     <%= f.hidden_field :client_id, :value => "#{@bill.client.id}" %>
     <%= @bill.client %>
   </div>
 
   <div class="field">
-    <%= f.label :concept %><br>
+    <%= f.label (t :concept) %><br>
     <%= f.text_field :concept %>
   </div>
   <div class="field">
-    <%= f.label :amount %><br>
+    <%= f.label (t :amount) %><br>
     <%= f.text_field :amount %>
   </div>
   <div class="field">
-    <%= f.label :invoice_date %><br>
+    <%= f.label t :invoice_date %><br>
     <%= f.date_select(:invoice_date,  start_year: 1990, end_year: Date.today.year, order: [:day, :month, :year]) %>
   </div>
   <div class="field">
-    <%= f.label :person_id %><br>
-    <%= f.select(:person_id, Person.all.collect {|x| [ x.name, x.id ] }, {prompt: 'Select Person'}) %>
+    <%= f.label t :person %><br>
+    <%= f.select(:person_id, Person.all.collect {|x| [ x.name, x.id ] }, {prompt: (t :select_person)}) %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Juridica:</strong>
+  <strong> <%= t :legal %>:</strong>
   <%= @person.legal %>
 </p>
 
 <p>
-  <strong>Nombre:</strong>
+  <strong> <%= t :name %>:</strong>
   <%= @person.name %>
 </p>
 
 <p>
-  <strong>Cuil cuit:</strong>
+  <strong> <%= t :cuil_cuit %>:</strong>
   <%= @person.cuil_cuit %>
 </p>
 
 <%= link_to t(:edit), edit_person_path(@person) %> |
-<%= link_to 'Back', people_path %>
+<%= link_to t(:back), people_path %>

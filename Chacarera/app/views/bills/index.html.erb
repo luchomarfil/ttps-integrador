@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Bills</h1>
+<h1> <%= t "crud.listing_bills" %></h1>
 
 <table class="table">
   <thead>
     <tr>
-      <th>Concept</th>
-      <th>Amount</th>
-      <th>Invoice date</th>
-      <th>Person</th>
-      <th>Client</th>
+      <th> <%= t :concept %></th>
+      <th> <%= t :amount %></th>
+      <th> <%= t :invoice_date %></th>
+      <th> <%= t :person %></th>
+      <th> <%= t :client %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -24,7 +24,7 @@
         <td><%= bill.client %></td>
         <td><%= link_to t(:show), client_bill_path(bill.client, bill) %></td>
         <td><%= link_to t(:edit), edit_client_bill_path(bill.client, bill) %></td>
-        <td><%= link_to t(:destroy), bill, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t(:destroy), bill, method: :delete, data: { confirm: (t :delete_confirm) } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'Inicio', controller: "welcome" %>
+<%= link_to t(:home), controller: "welcome" %>

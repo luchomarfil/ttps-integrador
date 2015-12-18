@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Clients</h1>
+<h1> <%= t 'crud.listing_clients' %></h1>
 
 <table class="table">
   <thead>
@@ -30,7 +30,7 @@
         <td><%= client.telephone %></td>
         <td><%= client.email %></td>
         <td><%= client.skype %></td>
-        <td><%= link_to 'New Bill', new_client_bill_path(client) %></td>
+        <td><%= link_to t('crud.new_bill'), new_client_bill_path(client) %></td>
         <td><%= link_to t(:show), client %></td>
         <td><%= link_to t(:edit), edit_client_path(client) %></td>
         <td><%= link_to t(:destroy), client, method: :delete, data: { confirm: (t :delete_confirm) } %></td>
@@ -40,6 +40,5 @@
 </table>
 
 <br>
-<%= t :hola %>
-<%= link_to 'New Client', new_client_path %>
-<%= link_to 'Inicio', controller: "welcome" %>
+<%= link_to t('crud.new_client'), new_client_path %>
+<%= link_to t(:home), controller: "welcome" %>

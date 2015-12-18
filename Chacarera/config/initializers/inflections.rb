@@ -14,3 +14,13 @@
 # ActiveSupport::Inflector.inflections(:en) do |inflect|
 #   inflect.acronym 'RESTful'
 # end
+#Son reglas mas complejas que podrían trasladarse a este ejemplo
+#http://lema.rae.es/dpd/srv/search?id=Iwao8PGQ8D6QkHPn4i
+ActiveSupport::Inflector.inflections(:es) do |inflect|
+  inflect.plural /([^djlnrsyí])$/, '\1s'
+  inflect.plural /([djlnrsyí])$/, '\1es'
+  inflect.plural /(.*)z/, '\1ces\2'
+  inflect.singular /([^djlnrsyí])s/, '\1\2'
+  inflect.singular /([djlnrsyí])es/, '\1\2'
+  inflect.singular /(.*)ces/, '\1z\2'
+end

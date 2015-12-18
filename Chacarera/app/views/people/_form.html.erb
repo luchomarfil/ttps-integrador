@@ -1,8 +1,8 @@
 <%= form_for(@person) do |f| %>
   <% if @person.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@person.errors.count, "error") %> prohibited this person from being saved:</h2>
 
+    <div id="error_explanation">
+      <h2> <%= t(:error_msg, count: @person.errors.count, locale: I18n.locale) << " " << (t :prohibited_save_error, model: (t :person)) %>:</h2>
       <ul>
       <% @person.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -12,15 +12,15 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :legal %><br>
+    <%= f.label t :legal %><br>
     <%= f.check_box :legal %>
   </div>
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label t :name %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :cuil_cuit %><br>
+    <%= f.label t :cuil_cuit %><br>
     <%= f.text_field :cuil_cuit %>
   </div>
   <div class="actions">

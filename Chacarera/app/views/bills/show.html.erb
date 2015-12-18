@@ -1,31 +1,31 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Concepto:</strong>
+  <strong> <%= t :concept %>:</strong>
   <%= @bill.concept %>
 </p>
 
 <p>
-  <strong>Monto:</strong>
+  <strong> <%= t :amount %>:</strong>
   <%= @bill.amount %>
 </p>
 
 <p>
-  <strong>Fecha emision:</strong>
+  <strong> <%= t :invoice_date %>:</strong>
   <%= @bill.invoice_date %>
 </p>
 
 <p>
-  <strong>Person:</strong>
+  <strong> <%= t :person %>:</strong>
   <%= @bill.person %>
 </p>
 
 <p>
-  <strong>Client:</strong>
+  <strong> <%= t :client %>:</strong>
   <%= @bill.client %>
 </p>
 
 
 <%= link_to t(:edit), edit_client_bill_path(@bill.client, @bill) %></td>
-<%= link_to 'Back', bills_path unless @from_client %>
-<%= link_to 'Back', clients_path if @from_client %>
+<%= link_to t(:back), bills_path unless @from_client %>
+<%= link_to t(:back), clients_path if @from_client %>

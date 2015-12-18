@@ -20,20 +20,99 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 es:
+  amount_by_year: "Facturado por año"
+  amount: "Monto"
+  age: "Edad"
+  actions: "Acciones"
+  back: "Atrás"
+  bill: "Factura"
+  bills: "Facturas"
+  bill_content_description: "Permite administrar las facturas, ver el detalle de cada una. No permite crear nuevas facturas"
+  birth_date: "Fecha de Nacimiento"
   client: "Cliente"
+  client_content_description: "Permite administrar los clientes, sus datos, ver informacion detallada de cada cliente y dar de alta facturas nuevas"
   clients: "Clientes"
+  concept: "Concepto"
   cuil_cuit: "Cuil cuit"
+  delete: "Borrar"
+  delete_confirm: "¿Esta seguro?"
+  destroy: "Eliminar"
+  dni: "DNI"
+  edit: "Editar"
+  email: "Correo electronico"
+  error: "Error"
+  error_msg:
+    one: "1 error"
+    other: "%{count} errores"
+  future_date_error: no puede estar en el futuro
   gender: "Genero"
   genders: "Generos"
+  home: "Inicio"
+  invoice_date: "Fecha de emisión"
+  legal: "Legal"
+  manage: "Administrar"
+  message_amount_by_year: "En %{month} facturó $%{amount}"
+  month: "Mes"
+  montly_this_year: "Cantidad de facturas emitidas por mes"
+
   name: "Nombre"
+  person: "Persona"
+  person_content_description: "Permite administrar las personas, ver informacion detallada de cada una"
+  people: "Personas"
+  prohibited_save_error: "impiden guardar el modelo %{model}"
+  quantity: "Cantidad"
+  select_person: "Seleccionar persona"
+  select_gender: "Seleccionar género"
+  select_day: "Seleccionar día"
+  select_month: "Seleccionar mes"
+  select_year: "Seleccionar año"
   surname: "Apellido"
-  birth_date: "Fecha de Nacimiento"
-  telephone: "Telefono"
-  email: "Correo electronico"
-  actions: "Acciones"
-  delete_confirm: "¿Esta seguro?"
   show: "Ver"
-  edit: "Editar"
-  delete: "Borrar"
-  destroy: "Eliminar"
-  hola: "perra"
+  telephone: "Telefono"
+  top_five_person: "Cinco personas más importantes"
+
+
+  crud:
+    new_bill: "Nueva Factura"
+    editing_bill: "Editando Factura"
+    listing_bills: "Facturas"
+    new_client: "Nuevo Cliente"
+    editing_client: "Editando Cliente"
+    listing_clients: "Clientes"
+    new_person: "Nueva Persona"
+    editing_person: "Editando Persona"
+    listing_people: "Listando Personas"
+
+
+  helpers:
+    submit:
+      # This will be the default ones, will take effect if no other
+      # are specifically defined for the models.
+      create: "Crear %{model}"
+      update: "Modificar %{model}"
+
+  activerecord:
+    models:
+      person: Persona
+      client: Cliente
+      bill: Factura
+      gender: Genero
+    attributes:
+      person:
+        name: "Nombre"
+      client:
+        name: "Nombre"
+        surname: "Apellido"
+        gender: "Género"
+        email: "Correo electronico"
+        birth_date: "Fecha de nacimiento"
+        telephone: "Telefono"
+      bill:
+        concept: "Concepto"
+        amount: "Monto"
+        person: "Persona"
+        invoice_date: "Fecha de emisión"
+
+
+  date:
+    month_names: [~, "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio","Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]

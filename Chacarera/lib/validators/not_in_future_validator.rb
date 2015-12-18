@@ -3,7 +3,7 @@ class NotInFutureValidator < ActiveModel::EachValidator
     return if value.nil?
     if value > Time.zone.today
       record.errors.add attribute,
-                        (options[:message] || "can't be in the future")
+                        (options[:message] || I18n.translate(:future_date_error,I18n.locale))
     end
   end
 end
