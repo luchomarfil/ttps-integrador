@@ -19,7 +19,7 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-es:
+es-AR:
   amount_by_year: "Facturado por año"
   amount: "Monto"
   age: "Edad"
@@ -33,6 +33,7 @@ es:
   client_content_description: "Permite administrar los clientes, sus datos, ver informacion detallada de cada cliente y dar de alta facturas nuevas"
   clients: "Clientes"
   concept: "Concepto"
+  contacts: "Contactos"
   cuil_cuit: "Cuil cuit"
   delete: "Borrar"
   delete_confirm: "¿Esta seguro?"
@@ -51,7 +52,7 @@ es:
   invoice_date: "Fecha de emisión"
   legal: "Legal"
   manage: "Administrar"
-  message_amount_by_year: "En %{month} facturó $%{amount}"
+  message_amount_by_year: "En %{month} facturó %{amount}"
   month: "Mes"
   montly_this_year: "Cantidad de facturas emitidas por mes"
 
@@ -69,7 +70,18 @@ es:
   surname: "Apellido"
   show: "Ver"
   telephone: "Telefono"
+  type: "Tipo"
   top_five_person: "Cinco personas más importantes"
+  valid_email_expected: "Ingrese una dirección de email válida"
+  value: "Valor"
+
+  address: Dirección
+  email: Email
+  cell: Celular
+  skype: Skype
+  telephone: Teléfono
+
+
 
 
   crud:
@@ -82,6 +94,8 @@ es:
     new_person: "Nueva Persona"
     editing_person: "Editando Persona"
     listing_people: "Listando Personas"
+    add_contact: "Agregar Contacto"
+    remove_contact: "Eliminar Contacto"
 
 
   helpers:

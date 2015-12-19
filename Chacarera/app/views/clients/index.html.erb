@@ -11,9 +11,6 @@
       <th><%= t :name %></th>
       <th><%= t :surname%></th>
       <th><%= t :birth_date%></th>
-      <th><%= t :telephone%></th>
-      <th><%= t :email%></th>
-      <th>Skype</th>
       <th colspan="3"><%= t :actions %></th>
     </tr>
   </thead>
@@ -26,10 +23,7 @@
         <td><%= client.gender%></td>
         <td><%= client.name %></td>
         <td><%= client.surname %></td>
-        <td><%= client.birth_date %></td>
-        <td><%= client.telephone %></td>
-        <td><%= client.email %></td>
-        <td><%= client.skype %></td>
+        <td><%= l client.birth_date %></td>
         <td><%= link_to t('crud.new_bill'), new_client_bill_path(client) %></td>
         <td><%= link_to t(:show), client %></td>
         <td><%= link_to t(:edit), edit_client_path(client) %></td>

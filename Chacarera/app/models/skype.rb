@@ -1,0 +1,2 @@
+class Skype < Contact
+end

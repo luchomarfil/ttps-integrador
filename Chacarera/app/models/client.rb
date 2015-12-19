@@ -1,5 +1,8 @@
 class Client < ActiveRecord::Base
   has_many :bills, dependent: :destroy
+  has_many :contacts, dependent: :destroy
+	accepts_nested_attributes_for :contacts, allow_destroy: true
+
   belongs_to :gender
 
   validates :name, presence: true
@@ -7,8 +10,7 @@ class Client < ActiveRecord::Base
   validates :cuil_cuit, presence: true, numericality: { only_integer: true }, length: { in: 9..11 }
   validates :dni, presence: true, numericality: { only_integer: true }, length: { in: 6..9 }
   validates :gender, presence: true
-  validates :email, presence: true
-  validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/,message: "enter valid email address" }
+
   validates :birth_date, not_in_future: true, presence: true
 
   def age

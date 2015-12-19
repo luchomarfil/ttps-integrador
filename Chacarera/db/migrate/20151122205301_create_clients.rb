@@ -6,10 +6,7 @@ class CreateClients < ActiveRecord::Migration
       t.integer :dni,      null: false
       t.string :name,    null: false
       t.string :surname,  null: false
-      t.datetime :birth_date
-      t.string :telephone,  null: false
-      t.string :email,     null: false
-      t.string :skype
+      t.date   :birth_date
       t.timestamps null: false
     end
   end

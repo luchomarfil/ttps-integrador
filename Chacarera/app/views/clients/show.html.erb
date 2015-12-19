@@ -28,23 +28,35 @@
 
 <p>
   <strong> <%= t :birth_date %>:</strong>
-  <%= @client.birth_date %>
+  <%= l @client.birth_date %>
 </p>
 
-<p>
-  <strong> <%= t :telephone %>:</strong>
-  <%= @client.telephone %>
-</p>
+<div>
+    <strong><%= t :contacts %></strong>
+    <div style="width:25%">
+    <table class="table" id="contacts">
+      <thead>
+        <tr>
+          <th> <%= t :type %> </th>
+          <th> <%= t :value %> </th>
+        </tr>
+      </thead>
 
-<p>
-  <strong> <%= t :email %>:</strong>
-  <%= @client.email %>
-</p>
+      <tbody>
+        <% @client.contacts.each  do |c| %>
+          <tr>
+            <td><%= t (c.type.downcase) %></td>
+            <td><%= c.value %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    </div>
+</div>
 
-<p>
-  <strong>Skype:</strong>
-  <%= @client.skype %>
-</p>
+
+
+
 
 <p>
   <strong> <%= t :age %> :</strong>
@@ -54,8 +66,9 @@
 <div>
   <strong><%= t :amount_by_year %></strong>
   <% @client.amount_by_year.each do |fila| %>
-    <p><%=t :message_amount_by_year, month: fila[0], amount: fila[1]%></p>
+    <p><%=t :message_amount_by_year, month: fila[0], amount:(number_to_currency fila[1])%></p>
   <% end %>
+  <p></p>
 </div>
 
 <div>

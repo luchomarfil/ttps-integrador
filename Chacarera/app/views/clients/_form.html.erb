@@ -1,4 +1,4 @@
-<%= form_for(@client) do |f| %>
+<%= nested_form_for(@client) do |f| %>
   <% if @client.errors.any? %>
     <div id="error_explanation">
       <h2> <%= t(:error_msg, count: @client.errors.count, locale: I18n.locale) << " " << (t :prohibited_save_error, model: (t :client)) %>:</h2>
@@ -36,18 +36,18 @@
     <!-- <%= f.datetime_select :birth_date %> -->
     <%= f.date_select(:birth_date,  start_year: 1900, end_year: Date.today.year,  order: [:day, :month, :year], prompt: { day: (t :select_day), month: (t :select_month), year: (t :select_year)}) %>
   </div>
-  <div class="field">
-    <%= f.label t :telephone %><br>
-    <%= f.text_field :telephone %>
-  </div>
-  <div class="field">
-    <%= f.label t :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :skype %><br>
-    <%= f.text_field :skype %>
-  </div>
+
+  <ul>
+    <%= t :contacts %>:
+      <%= f.fields_for :contacts do |contact_form| %>
+        <%= render 'contact_fields', :f => contact_form %>
+      <% end %>
+      <%= f.link_to_add t( "crud.add_contact" ), :contacts %>
+
+  </ul>
+
+
+
   <div class="actions">
     <%= f.submit %>
   </div>

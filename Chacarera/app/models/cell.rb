@@ -1,0 +1,2 @@
+class Cell < Contact
+end

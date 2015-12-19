@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151123000100) do
+ActiveRecord::Schema.define(version: 20151218222607) do
 
   create_table "bills", force: :cascade do |t|
     t.integer  "client_id"
     t.integer  "person_id"
     t.string   "concept",      null: false
     t.float    "amount",       null: false
-    t.datetime "invoice_date", null: false
+    t.date     "invoice_date", null: false
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
@@ -32,15 +32,22 @@ ActiveRecord::Schema.define(version: 20151123000100) do
     t.integer  "dni",        null: false
     t.string   "name",       null: false
     t.string   "surname",    null: false
-    t.datetime "birth_date"
-    t.string   "telephone",  null: false
-    t.string   "email",      null: false
-    t.string   "skype"
+    t.date     "birth_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   add_index "clients", ["gender_id"], name: "index_clients_on_gender_id"
+
+  create_table "contacts", force: :cascade do |t|
+    t.string   "value"
+    t.string   "type"
+    t.integer  "client_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "contacts", ["client_id"], name: "index_contacts_on_client_id"
 
   create_table "genders", force: :cascade do |t|
     t.string   "name"

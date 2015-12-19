@@ -18,8 +18,8 @@
     <% @bills.each do |bill| %>
       <tr>
         <td><%= bill.concept %></td>
-        <td><%= bill.amount %></td>
-        <td><%= bill.invoice_date %></td>
+        <td><%= number_to_currency  bill.amount %></td>
+        <td><%= l bill.invoice_date %></td>
         <td><%= bill.person %></td>
         <td><%= bill.client %></td>
         <td><%= link_to t(:show), client_bill_path(bill.client, bill) %></td>

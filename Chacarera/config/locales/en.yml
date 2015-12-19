@@ -34,6 +34,7 @@ en:
   client_content_description: "Manage clients, view detailed info. Create new bills "
   clients: "Clients"
   concept: "Concept"
+  contacts: "Contacts"
   cuil_cuit: "Cuil cuit"
   delete: "Delete"
   delete_confirm: "Are you sure?"
@@ -70,6 +71,13 @@ en:
   show: "View"
   telephone: "Telephone"
   top_five_person: "Top five personas"
+  valid_email_expected: "enter valid email address"
+
+  address: Address
+  email: Email
+  cell: Cell
+  skype: Skype
+  telephone: Telephone
 
 
   crud:
@@ -82,3 +90,5 @@ en:
    new_person: "New Person"
    editing_person: "Editing Person"
    listing_people: "Listing People"
+   new_contact: "New Contact"
+   remove_contact: "Remove Contact"

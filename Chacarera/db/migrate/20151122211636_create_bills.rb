@@ -5,7 +5,7 @@ class CreateBills < ActiveRecord::Migration
       t.belongs_to :person, index:true
       t.string :concept, null:false
       t.float :amount, null:false
-      t.datetime :invoice_date, null:false
+      t.date :invoice_date, null:false
 
       t.timestamps null: false
     end
