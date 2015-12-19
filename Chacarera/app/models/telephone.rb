@@ -1,2 +1,0 @@
-class Telephone < Contact
-end

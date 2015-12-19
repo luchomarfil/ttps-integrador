@@ -4,8 +4,6 @@ class CreateContacts < ActiveRecord::Migration
       t.string :value
       t.string :type
       t.belongs_to :client, index: true
-#      t.integer :client_id
-
       t.timestamps null: false
     end
   end

@@ -1,0 +1,18 @@
+
+<strong><%= t :top_five_person %></strong>
+<div style="width:25%">
+  <table class="table">
+    <thead>
+      <tr>
+        <th> <%= t :name %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @client.top_five_person.each  do |person| %>
+        <tr>
+          <td><%= person.name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

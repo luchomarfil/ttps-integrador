@@ -30,7 +30,7 @@ class BillsController < ApplicationController
     @bill = Bill.new(bill_params)
     respond_to do |format|
       if @bill.save
-        format.html { redirect_to @bill, notice: 'Bill was successfully created.', flash: {from_client: true}}
+        format.html { redirect_to @bill, notice: t('crod.bill_created'), flash: {from_client: true}}
         format.json { render :show, status: :created, location: @bill }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class BillsController < ApplicationController
   def update
     respond_to do |format|
       if @bill.update(bill_params)
-        format.html { redirect_to @bill, notice: 'Bill was successfully updated.' }
+        format.html { redirect_to @bill, notice: t('crud.bill_updated')}
         format.json { render :show, status: :ok, location: @bill }
       else
         format.html { render :edit }
@@ -58,7 +58,7 @@ class BillsController < ApplicationController
   def destroy
     @bill.destroy
     respond_to do |format|
-      format.html { redirect_to bills_url, notice: 'Bill was successfully destroyed.' }
+      format.html { redirect_to bills_url, notice: t('crud.bill_updated')}
       format.json { head :no_content }
     end
   end

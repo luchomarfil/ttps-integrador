@@ -1,0 +1,21 @@
+<strong><%= t :montly_this_year %></strong>
+
+<div style="width:25%">
+<table class="table">
+  <thead>
+    <tr>
+      <th> <%= t :month %> </th>
+      <th> <%= t :quantity %> </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% c.montly_this_year.each  do |month,quantity| %>
+      <tr>
+        <td><%= t("date.month_names")[month] %></td>
+        <td><%= quantity %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>

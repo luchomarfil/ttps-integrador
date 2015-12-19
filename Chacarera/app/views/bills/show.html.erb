@@ -16,8 +16,12 @@
 </p>
 
 <p>
-  <strong> <%= t :person %>:</strong>
-  <%= @bill.person %>
+  <strong> <%= t :cuil_cuit %>:</strong>
+  <%= @bill.person.cuil_cuit %>
+</p>
+<p>
+  <strong> <%= t :name %>/ <%= t :business_name %> :</strong>
+  <%= @bill.person.name %>
 </p>
 
 <p>

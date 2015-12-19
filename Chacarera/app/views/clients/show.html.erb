@@ -64,55 +64,15 @@
 </p>
 
 <div>
-  <strong><%= t :amount_by_year %></strong>
-  <% @client.amount_by_year.each do |fila| %>
-    <p><%=t :message_amount_by_year, month: fila[0], amount:(number_to_currency fila[1])%></p>
-  <% end %>
-  <p></p>
+  <%= render 'amount_by_year', :c => @client%>
 </div>
 
 <div>
-    <strong><%= t :montly_this_year %></strong>
-    <div style="width:25%">
-    <table class="table">
-      <thead>
-        <tr>
-          <th> <%= t :month %> </th>
-          <th> <%= t :quantity %> </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% (1..12).each  do |month_number| %>
-          <tr>
-            <td><%= t("date.month_names")[month_number] %></td>
-            <td><%= @client.montly_this_year[month_number] || 0 %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-    </div>
+    <%= render 'montly_this_year', :c => @client %>
 </div>
 
 <div>
-    <strong><%= t :top_five_person %></strong>
-    <div style="width:25%">
-    <table class="table">
-      <thead>
-        <tr>
-          <th> <%= t :name %></th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% @client.top_five_person.each  do |person| %>
-          <tr>
-            <td><%= person.name %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-    </div>
+    <%= render 'top_five_person', :c => @client %>
 </div>
 
 

@@ -6,10 +6,7 @@ one:
   gender_id: masculino.id
   name: Luciano
   surname: Marfil
-  birth_date: 2015-11-22 17:53:04
-  telephone: 4215445
-  email: luchomarfil@gmail.com
-  skype: lucho.marfil@hotmail.com
+  birth_date: 2015-11-22 17:53:04  
 
 two:
   cuil_cuit: MyString
@@ -18,9 +15,7 @@ two:
   name: MyString
   surname: MyString
   birth_date: 2015-11-22 17:53:04
-  telephone: MyString
-  email: MyString
-  skype: MyString
+
 
 roberto:
   cuil_cuit: 20312323182
@@ -29,9 +24,6 @@ roberto:
   name: Roberto
   surname: Castro
   birth_date: 2015-11-22 17:53:04
-  telephone: 4708855
-  email: roberto.castro@gmail.com
-  skype: rcastro@hotmail.com
 
 cliente_sin_facturas:
   cuil_cuit: 20777215462
@@ -40,9 +32,7 @@ cliente_sin_facturas:
   name: Laura
   surname: Bernardi
   birth_date: 2015-11-22 17:53:04
-  telephone: 4212255
-  email: lbb@gmail.com
-  skype: lbb@hotmail.com
+
 
 cliente_con_facturas:
   cuil_cuit: 2012345652
@@ -51,6 +41,3 @@ cliente_con_facturas:
   name: Luis
   surname: Miguel
   birth_date: 2015-11-22 17:53:04
-  telephone: 41222154
-  email: suave@gmail.com
-  skype: playa@hotmail.com

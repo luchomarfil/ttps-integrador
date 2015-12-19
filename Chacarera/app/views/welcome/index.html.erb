@@ -29,7 +29,22 @@
       <%= t :bill_content_description %>
     </p>
     <p>
-      <%= link_to t(:manage), people_path %>
+      <%= link_to t(:manage), bills_path %>
+    </p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <h2>
+      <%= t :languagues %>
+    </h2>
+    <p>
+      <%= t :languagues_content_description %>
+    </p>
+
+    <p>
+      <%= link_to "ENG", locale: :en %> | <%= link_to "ESP", locale: :"es-AR" %>
     </p>
   </div>
 </div>

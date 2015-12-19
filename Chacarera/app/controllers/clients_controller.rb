@@ -16,11 +16,12 @@ class ClientsController < ApplicationController
   def new
     @client = Client.new
     1.times {@client.contacts.build}
-
+    @types  = [Address, Cell, Email, Skype, Telephone]
   end
 
   # GET /clients/1/edit
   def edit
+
   end
 
   # POST /clients
@@ -28,8 +29,8 @@ class ClientsController < ApplicationController
   def create
     @client = Client.new(client_params)
     respond_to do |format|
-      if @client.save
-        format.html { redirect_to @client, notice: 'Client was successfully created.' }
+      if @client.save!
+        format.html { redirect_to @client, notice: t('crud.client_created') }
         format.json { render :show, status: :created, location: @client }
       else
         format.html { render :new }
@@ -43,7 +44,7 @@ class ClientsController < ApplicationController
   def update
     respond_to do |format|
       if @client.update(client_params)
-        format.html { redirect_to @client, notice: 'Client was successfully updated.' }
+        format.html { redirect_to @client, notice: t('crud.client_updated')}
         format.json { render :show, status: :ok, location: @client }
       else
         format.html { render :edit }
@@ -57,7 +58,7 @@ class ClientsController < ApplicationController
   def destroy
     @client.destroy
     respond_to do |format|
-      format.html { redirect_to clients_url, notice: 'Client was successfully destroyed.' }
+      format.html { redirect_to clients_url, notice: t('crud.client_deleted') }
       format.json { head :no_content }
     end
   end
@@ -66,6 +67,7 @@ class ClientsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_client
       @client = Client.find(params[:id])
+      @types  = [Address, Cell, Email, Skype, Telephone]
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

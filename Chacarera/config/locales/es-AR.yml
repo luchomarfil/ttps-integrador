@@ -29,12 +29,13 @@ es-AR:
   bills: "Facturas"
   bill_content_description: "Permite administrar las facturas, ver el detalle de cada una. No permite crear nuevas facturas"
   birth_date: "Fecha de Nacimiento"
+  business_name: "Razón Social"
   client: "Cliente"
   client_content_description: "Permite administrar los clientes, sus datos, ver informacion detallada de cada cliente y dar de alta facturas nuevas"
   clients: "Clientes"
   concept: "Concepto"
   contacts: "Contactos"
-  cuil_cuit: "Cuil cuit"
+  cuil_cuit: "Cuil/Cuit"
   delete: "Borrar"
   delete_confirm: "¿Esta seguro?"
   destroy: "Eliminar"
@@ -50,6 +51,8 @@ es-AR:
   genders: "Generos"
   home: "Inicio"
   invoice_date: "Fecha de emisión"
+  languagues: "Idiomas disponibles"
+  languagues_content_description: "Configurar el idioma de la aplicación"
   legal: "Legal"
   manage: "Administrar"
   message_amount_by_year: "En %{month} facturó %{amount}"
@@ -69,10 +72,13 @@ es-AR:
   select_year: "Seleccionar año"
   surname: "Apellido"
   show: "Ver"
-  telephone: "Telefono"
   type: "Tipo"
   top_five_person: "Cinco personas más importantes"
   valid_email_expected: "Ingrese una dirección de email válida"
+  valid_skype_expected: "Ingrese un usuario skype válido. Entre 6 y 32 caracteres alfanuméricos"
+  valid_telephone_expected: "teléfono debe estar compuesto solo de números"
+  valid_cell_expected: "celular debe estar compuesto solo de números"
+
   value: "Valor"
 
   address: Dirección
@@ -88,12 +94,21 @@ es-AR:
     new_bill: "Nueva Factura"
     editing_bill: "Editando Factura"
     listing_bills: "Facturas"
+    bill_created: "Factura creada exitosamente"
+    bill_updated: "Factura actualizada exitosamente"
+    bill_deleted: "Factura elimninada exitosamente"
     new_client: "Nuevo Cliente"
     editing_client: "Editando Cliente"
     listing_clients: "Clientes"
+    client_created: "Cliente creado exitosamente"
+    client_updated: "Cliente actualizado exitosamente"
+    client_deleted: "Cliente eliminado exitosamente"
     new_person: "Nueva Persona"
     editing_person: "Editando Persona"
     listing_people: "Listando Personas"
+    person_created: "Persona creada exitosamente"
+    person_updated: "Persona actualizada exitosamente"
+    person_deleted: "Persona eliminada exitosamente"
     add_contact: "Agregar Contacto"
     remove_contact: "Eliminar Contacto"
 
@@ -111,7 +126,10 @@ es-AR:
       client: Cliente
       bill: Factura
       gender: Genero
+      contact: Contacto
     attributes:
+      contact:
+        value: "Valor"
       person:
         name: "Nombre"
       client:

@@ -1,0 +1,8 @@
+<strong><%= t :amount_by_year %></strong>
+<%if c.amount_by_year.empty? %>
+  <p> - </p>
+<%else%>
+  <% c.amount_by_year.each do |fila| %>
+  <p><%=t :message_amount_by_year, month: fila[0], amount:(number_to_currency fila[1])%></p>
+  <% end %>
+<%end %>

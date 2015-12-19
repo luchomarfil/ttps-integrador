@@ -7,7 +7,7 @@ class Person < ActiveRecord::Base
   # t.timestamps null: false
 
   validates :name, presence: true
-  validates :cuil_cuit, presence: true, numericality: { only_integer: true }, length: { in: 9..11 }
+  validates :cuil_cuit, presence: true, numericality: { only_integer: true }, length: { in: 9..11 },  uniqueness: true
 
   def to_s
     "#{name}"

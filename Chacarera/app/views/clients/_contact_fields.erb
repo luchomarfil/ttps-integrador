@@ -1,11 +1,6 @@
-<div class="juntos">
 	<div class="field">
-		<p>
-		  <strong><%= t :dni %>:</strong>
-		  <%= @client.dni %>
-		</p>
 		<%= f.label t( :type ) %><br>
-		<%= (f.select :type, Contact::TYPES.map { |ta| [t(ta.to_s.downcase),ta.name] }) unless f.object.persisted? %>
+		<%= (f.select :type, types.map { |ta| [t(ta.to_s.downcase),ta.name] }) unless f.object.persisted? %>
 		<%= t(f.object.class.name.downcase) if f.object.persisted? %>
 	</div>
 	<div class="field">
@@ -13,4 +8,3 @@
 		<%= f.text_field :value %>
 		<%= f.link_to_remove t( "crud.remove_contact" ) %>
 	</div>
-</div>

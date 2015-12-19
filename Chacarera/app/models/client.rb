@@ -4,11 +4,11 @@ class Client < ActiveRecord::Base
 	accepts_nested_attributes_for :contacts, allow_destroy: true
 
   belongs_to :gender
-
+  validates :contacts, presence: true
   validates :name, presence: true
   validates :surname, presence: true
-  validates :cuil_cuit, presence: true, numericality: { only_integer: true }, length: { in: 9..11 }
-  validates :dni, presence: true, numericality: { only_integer: true }, length: { in: 6..9 }
+  validates :cuil_cuit, presence: true, numericality: { only_integer: true }, length: { in: 9..11 },  uniqueness: true
+  validates :dni, presence: true, numericality: { only_integer: true }, length: { in: 6..9 },  uniqueness: true
   validates :gender, presence: true
 
   validates :birth_date, not_in_future: true, presence: true
@@ -28,10 +28,14 @@ class Client < ActiveRecord::Base
   end
 
   def montly_this_year
-    a = {}
+    sum = {}
     this_year = bills.order(:invoice_date).reject {|a| a.invoice_date.year != Date.today.year}
-    this_year.map{|b| a[b.invoice_date.month] = (a[b.invoice_date.month] || 0) + 1 }
-    a
+    this_year.map{|b| sum[b.invoice_date.month] = (sum[b.invoice_date.month] || 0) + 1 }
+
+    last_twelve = {}
+    (1..12).each  { |month_number| last_twelve[month_number] = sum[month_number] || 0}
+
+    last_twelve
   end
 
   def top_five_person
