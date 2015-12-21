@@ -19,6 +19,8 @@ sqlite3
 ```shell
 git clone https://github.com/luchomarfil/ttps-integrador/entrega
 ```
++ Hacer un checkout del tag `entrega`
+
 + Descargar las dependencias del proyecto. Desde la carpeta Chacarera, que es donde se encuentra el Gemfile
 ```shell
 ttps-integrador/Chacarera$ gem install bundle
